@@ -279,8 +279,6 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226485006-7e8f1951-be0a-4ddd-b4d1-2ef4737c0974.png)
 
-![image](https://user-images.githubusercontent.com/7371969/226485387-7951817d-11ec-4f0f-a177-b5657c3ec820.png)
-
 #### 6.8 Now you click 'Save' on the right up connor. Wait the job to be saved, then click 'Run' to execute ELT job that you just created.
 
 ![image](https://user-images.githubusercontent.com/7371969/226485542-6ad01d5d-04c1-4cf9-b973-5062694a9522.png)
@@ -301,4 +299,3 @@
 #### Chanllenge: now you know how to load data from S3 to MySQL RDS database using AWS Glue. you can try to load another .csv files.
 
 ![image](https://user-images.githubusercontent.com/7371969/226486875-f1f7cab4-e024-4771-9b7f-34a929a73be4.png)
-
