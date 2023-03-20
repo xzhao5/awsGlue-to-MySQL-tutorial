@@ -141,21 +141,28 @@
 #### Now, you have all tables on MySQL RDS database.
 
 ## Step 4: Set up data conncetion in AWS Glue:
-### 4.1 Search 'glue' in search bar and then click 'AWS Glue'. 
+#### 4.1 Search 'glue' in search bar and then click 'AWS Glue'. 
 
 ![image](https://user-images.githubusercontent.com/7371969/226461155-3ceb0859-13eb-4b75-9423-029a95481246.png)
 
-### 4.2 Click 'Data connections' in left pannel, scroll down the web page, and click 'Create connection'.
+#### 4.2 Click 'Data connections' in left pannel, scroll down the web page, and click 'Create connection'.
 
 ![image](https://user-images.githubusercontent.com/7371969/226461324-a6d978ac-a269-4715-bc3b-36c4af9e5d48.png)
 
 ![image](https://user-images.githubusercontent.com/7371969/226461594-a8933605-7529-4b27-ad57-02d3b9b90d1e.png)
 
-### Give the connection a name, that's say, 'mysql_connection'; choose 'Amazon RDS' and then 'MySQL'. 
+#### 4.3 Give the connection a name, that's say, 'mysql_connection'; choose 'Amazon RDS' and then 'MySQL'. 
 
 ![image](https://user-images.githubusercontent.com/7371969/226461844-9342f538-bb29-41d7-9e64-ad8a5bfc753b.png)
 
-### Select your 'instance name', in my case, it's 'database-1', then give a Database name, that's say, 'p3project'; Put your master password as 1.6 mentioned here and click 'Create connection'. 
+#### 4.4 Select your 'instance name', in my case, it's 'database-1', then give a Database name, that's say, 'p3project'; Put your master password as 1.6 mentioned here and click 'Create connection'. 
 
 ![image](https://user-images.githubusercontent.com/7371969/226462687-e559efff-91d2-4d14-9c74-2c36928784e0.png)
+
+## Step 5: Set up Crawlers in AWS Glue:
+#### 5.1 click 'Crawlers' on left pannel and then click 'Add crawler'.  
+
+![image](https://user-images.githubusercontent.com/7371969/226463252-91c4f7da-222f-46fe-aa3f-7d8700931c37.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226463594-8c35d98a-c8b0-4a16-a708-fe54d7c8d520.png)
 
