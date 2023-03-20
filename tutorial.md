@@ -120,5 +120,29 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226457742-714f4bd1-1dae-4ffb-993a-4fae3c17157d.png)
 
+## Step 3: Create Database from local computer:
+
+#### 3.1 Open the 'MySQL Workbeach' - if you do not have one, please download from offical website and version is 8.0 or above.
+
+![image](https://user-images.githubusercontent.com/7371969/226458814-503966f7-a4bc-4858-a6a3-d8c4304f9259.png)
+
+#### 3.2 Create New Connection by click '+' button, edit the configuration windows, then click 'ok'. RDS endpoints you can find under RDS database in your AWS console.  
+
+![image](https://user-images.githubusercontent.com/7371969/226459356-92fe123d-712f-4c38-881c-7ef18d618bd9.png)
+
+#### I assume I have this is all configured, so I double click this one to remote access MySQL on AWS RDS. 
+
+![image](https://user-images.githubusercontent.com/7371969/226459639-07b9e269-3a1b-4694-935e-5ad4bbf04d20.png)
+
+#### 3.3 Download the p3project.sql, open this sql file and run the script by each statement to create the database, schema and tables.
+
+![image](https://user-images.githubusercontent.com/7371969/226460252-98be25dd-381b-442e-9c38-02d881872ad2.png)
+
+#### Now, you have all tables on MySQL RDS database.
+
+
+
+
+
 
 
