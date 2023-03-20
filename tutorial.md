@@ -68,15 +68,27 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226439609-dd7bbe13-4e8d-47f4-8c67-963598d6788e.png)
 
-### 2.2 Create VPC Endpoints
+### 2.2 Create VPC Endpoints: use for AWS glue to connect to S3.
 #### In serach bar, serach 'security groups' and click VPC one. 
 
 ![image](https://user-images.githubusercontent.com/7371969/226440067-4dd5570f-5057-43e7-bdd4-002bfe382c79.png)
 
-#### On left panel, click 'Endpoints' then 'Create endpoint'. 
+#### On left panel, click 'Endpoints' then click 'Create endpoint'. 
 
 ![image](https://user-images.githubusercontent.com/7371969/226440363-076bbd3d-b72c-4a34-975c-9b291f377adf.png)
 
+#### Give the secuity group a name, that's say, 'Glue-RDS-MySQL', then select 'AWS services'. 
 
+![image](https://user-images.githubusercontent.com/7371969/226454460-226d95e1-5790-4d8a-b135-4a5c24016497.png)
 
+#### search 's3' in 'Service' block and select s3 endpoints as screenscreen shows, and the type is 'Gateway'.
 
+![image](https://user-images.githubusercontent.com/7371969/226454954-a12932ef-f908-4f12-951b-6fc3578432db.png)
+
+#### select same VPC as 1.8 mentioned and other configuration can be default.
+
+![image](https://user-images.githubusercontent.com/7371969/226455159-0c12c195-36c2-49c0-bcae-9fd2d9213b78.png)
+
+#### click 'Create endpoint' and successfully create endpoints now. 
+
+![image](https://user-images.githubusercontent.com/7371969/226455330-f496da53-603a-44c4-9623-b9f0abf2fdbc.png)
