@@ -295,4 +295,10 @@
 ![image](https://user-images.githubusercontent.com/7371969/226485933-d39b2912-f029-49c3-9afe-8148e717a581.png)
 
 #### 7.2 Now All data is loading from S3 to your MySQL database. Nice job ! 
+
+![image](https://user-images.githubusercontent.com/7371969/226486846-16aaca48-335d-438d-8faf-a641e7cccdd8.png)
+
 #### Chanllenge: now you know how to load data from S3 to MySQL RDS database using AWS Glue. you can try to load another .csv files.
+
+![image](https://user-images.githubusercontent.com/7371969/226486875-f1f7cab4-e024-4771-9b7f-34a929a73be4.png)
+
