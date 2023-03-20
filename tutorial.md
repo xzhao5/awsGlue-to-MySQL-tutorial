@@ -166,3 +166,57 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226463594-8c35d98a-c8b0-4a16-a708-fe54d7c8d520.png)
 
+#### 5.2 give Crawler a name, that's say, 'mycrawler_mysql', then click 'Next'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226478483-f1929784-ef7e-4eaf-b40e-fd14e8fbb365.png)
+
+#### 5.21 Click 'Add a data source'.
+
+![image](https://user-images.githubusercontent.com/7371969/226477179-d5a65455-6cf4-4d11-9c11-21e3d9dd278b.png)
+
+#### 5.22 In 'Add a data source' window, select 'JDBC' -> select the data connection you create in Step 4 -> Include path 'Your database Name/%', in my case, the database name is 'p3project', 'p3project/%' means all schema and tables under database 'p3project'. All set up, now click 'Add a JDBC data source'.
+
+![image](https://user-images.githubusercontent.com/7371969/226477964-ea58ece5-4b0b-4492-b52d-775afe664e11.png)
+
+#### 5.3 Click 'Next' to continue. 
+
+![image](https://user-images.githubusercontent.com/7371969/226478216-3c7446f3-d92d-4e87-98dd-dc17bcd26a5c.png)
+
+#### 5.4 Select IAM role you create in 2.3 in my case, it's 'demo_IAM_Glue_Role' and then click 'Next'.
+
+![image](https://user-images.githubusercontent.com/7371969/226479279-e4d9f658-9f53-42fb-9972-654c31419716.png)
+
+#### 5.5 Create a new databse by clicking 'Add database'. (I have already create a database there called 'demo_p3project')
+
+![image](https://user-images.githubusercontent.com/7371969/226479454-ddab4e16-03b6-4ce8-932a-837218065c39.png)
+
+#### 5.51 Give database a name, that's say, 'demo_p3project' and then click 'Create database'.
+
+![image](https://user-images.githubusercontent.com/7371969/226479799-a7aad97e-24e6-4665-b6f6-2e545c9ba03e.png)
+
+#### 5.52 Go back to Crawler creation web page, click 'Next'.
+
+![image](https://user-images.githubusercontent.com/7371969/226480316-65ea2c85-da21-4d4a-b55a-3fd7fcbcfa4b.png)
+
+#### 5.6 Review your Crawler configuration and click 'Update'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226480510-56d64aad-cad8-4d82-a875-dfd9f149a509.png)
+
+#### 5.7 Now you have your crawler. select the crawler and click 'Run'. As a result, you should have 5 tables in the new database you created in 5.51.
+
+![image](https://user-images.githubusercontent.com/7371969/226481157-472261c7-f66e-4844-a1ae-8ec3c5abd25f.png)
+
+#### As a result, you have successfully run the crawler job. But how to check if tables is over there ? 
+
+![image](https://user-images.githubusercontent.com/7371969/226481228-b61eb6ee-1e41-48d8-9887-987681723c56.png)
+
+#### Click 'Database' on left pannel and now you can see all tables under this databses. Great job !
+
+![image](https://user-images.githubusercontent.com/7371969/226481503-29f6e888-4fa8-4f39-8899-7bcc9adb82d5.png)
+
+
+
+
+
+
+
