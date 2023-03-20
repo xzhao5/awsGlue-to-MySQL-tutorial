@@ -92,3 +92,33 @@
 #### click 'Create endpoint' and successfully create endpoints now. 
 
 ![image](https://user-images.githubusercontent.com/7371969/226455330-f496da53-603a-44c4-9623-b9f0abf2fdbc.png)
+
+### 2.3 IAM roles set up for AWS Glue operate and connection. 
+#### In serach bar, serach 'IAM' and click 'IAM'.
+
+![image](https://user-images.githubusercontent.com/7371969/226455733-1f533ded-cad8-4be8-b557-f53e5e71e1e1.png)
+
+#### Click 'Roles' on left panel, then click 'Create role'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226456026-e117bfb8-b3b3-46ba-9a6a-1cad6dbe98ff.png)
+
+#### Select 'AWS Service'; Search Glue in below search bar, select 'Glue' and then click 'Next'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226456311-27098634-f203-4034-9fa4-8ef6eaf6054e.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226456490-efa9cbb8-0577-4e87-9bf6-e6777a010b86.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226456745-ff435beb-9c7c-443f-a66d-9ec02977a79b.png)
+
+#### Please grant the below policies as screenshot shows and click 'Next'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226456915-465167f8-b158-4b35-979f-c0aeed303afd.png)
+
+#### Give the secuity group a name, that's say, 'demo_IAM_Glue_Role', then click 'Create role' in the bottom of this page.
+
+![image](https://user-images.githubusercontent.com/7371969/226457386-6812f310-9ae1-4e26-b2bf-70580fa8ea29.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226457742-714f4bd1-1dae-4ffb-993a-4fae3c17157d.png)
+
+
+
