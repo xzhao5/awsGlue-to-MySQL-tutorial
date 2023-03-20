@@ -214,9 +214,85 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226481503-29f6e888-4fa8-4f39-8899-7bcc9adb82d5.png)
 
+## Step 6: Load S3 data to MySQL by using AWS Glue.
+#### 6.1 click 'ETL jobs' on left pannel.
 
+![image](https://user-images.githubusercontent.com/7371969/226481761-77387eb3-b2c3-4f95-a881-db46d9c47d8d.png)
 
+#### 6.2 Change the block 'Target' from 'S3' (default) to 'MySQL', then click 'Create'.
 
+![image](https://user-images.githubusercontent.com/7371969/226481989-624054a6-1719-4ca8-bb9a-ea3fc9e6edcb.png)
 
+#### 6.3 Click 'S3 bucket' in graph, and give your ELT job a name, that's say, 'my-first-elt-job'. 
 
+![image](https://user-images.githubusercontent.com/7371969/226482253-4e3f7a17-131e-4e51-95ae-6ab3ceaeaef8.png)
 
+#### 6.31 On right hand side, click 'Browse S3'.
+
+![image](https://user-images.githubusercontent.com/7371969/226482453-3ea80269-76a8-49b6-8947-908c6a2f101f.png)
+
+#### 6.32 choose .csv under your S3 bucket, as a example, I select 'aisles.csv' and then click 'choose'.
+
+![image](https://user-images.githubusercontent.com/7371969/226482598-844248f8-7e7b-4b4e-ae07-447840615de7.png)
+
+#### 6.33 Click 'Infer schema'. *Note: S3 location may be differnent. S3 URL would be S3://your_bucket/aisles.csv or S3://your_bucket/your_folder/aisles.csv.
+
+![image](https://user-images.githubusercontent.com/7371969/226482841-4869dbaa-ab75-49c9-8ac0-6cd2c29d4967.png)
+
+#### 6.34 select 'Disable' in Quote character. then click 'Output shema' to check the options.
+
+![image](https://user-images.githubusercontent.com/7371969/226483363-49a54d99-536e-4551-bd04-1107869f1ada.png)
+
+#### 6.4 This looks good to me. Click the block 'ApplyMapping' in the graph.  
+
+![image](https://user-images.githubusercontent.com/7371969/226483533-9330750e-7760-4f75-80e3-9fb36ca67b95.png)
+
+#### 6.41 click 'Transform' tab on right hand side. aisle_id data type should be int, rather than 'string'. change this to 'int'.
+
+![image](https://user-images.githubusercontent.com/7371969/226483717-4dda2882-3fcf-4ed2-8837-0ec3fc1d98a9.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226483874-bada00d5-018c-47cc-8f91-4590a855b663.png)
+
+#### 6.42 click 'Output schema' to check the change. This looks good to me. 
+
+![image](https://user-images.githubusercontent.com/7371969/226483980-dfaa907a-0330-4d4b-a2d2-3d460fe54219.png)
+
+#### 6.5 Click the block 'MySQL table' in the graph. select 'Data target properties -MySQL' - > the database you created in 5.51 -> select the match table, in this case, it's 'p3project_aisles'.
+
+![image](https://user-images.githubusercontent.com/7371969/226484190-23834718-08f6-4f27-b19f-642507e65aa1.png)
+
+#### 6.51 Check 'Output schema' and all looks good to me.
+
+![image](https://user-images.githubusercontent.com/7371969/226484476-a8143b32-a1a1-49b7-b882-0b6eeae28f7d.png)
+
+#### 6.6 Now we want to preview the result. So, click last tab 'Data preview' -> click 'Start data preview session'.
+
+![image](https://user-images.githubusercontent.com/7371969/226484572-5c9a271c-512d-4819-aa38-3dd3c3e05c73.png)
+
+#### 6.61 select the IAM you create in 2.3, then click 'Confirm'. This would take a few mins so be patient ^ - ^
+
+![image](https://user-images.githubusercontent.com/7371969/226484675-488684db-5c0d-4737-be27-31d092ecce5b.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226484867-5a70e9bf-e2bc-46db-b3b7-2676f756b1cc.png)
+
+#### 6.7 you possibly cannot see anything on table 'Data preview' in the block 'MySQL table'. That's normal and don't be panic. Alternatively, you can click block 'ApplyMapping' in the graph and then click tab 'Data preview', that means it's successful on data preview. 
+
+![image](https://user-images.githubusercontent.com/7371969/226485006-7e8f1951-be0a-4ddd-b4d1-2ef4737c0974.png)
+
+![image](https://user-images.githubusercontent.com/7371969/226485387-7951817d-11ec-4f0f-a177-b5657c3ec820.png)
+
+#### 6.8 Now you click 'Save' on the right up connor. Wait the job to be saved, then click 'Run' to execute ELT job that you just created.
+
+![image](https://user-images.githubusercontent.com/7371969/226485542-6ad01d5d-04c1-4cf9-b973-5062694a9522.png)
+
+## Step 7: Verify your data from local computer.
+### 7.1 open your MySQL Workbeach and we will run below sql statement. Select all sql statement and click the execution icon. 
+
+> use p3project; --select database
+
+> select * from Aisles; --see table
+
+![image](https://user-images.githubusercontent.com/7371969/226485933-d39b2912-f029-49c3-9afe-8148e717a581.png)
+
+#### 7.2 Now All data is loading from S3 to your MySQL database. Nice job ! 
+#### Chanllenge: now you know how to load data from S3 to MySQL RDS database using AWS Glue. you can try to load another .csv files.
