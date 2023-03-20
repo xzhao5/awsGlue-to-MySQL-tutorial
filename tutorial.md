@@ -114,7 +114,7 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226456915-465167f8-b158-4b35-979f-c0aeed303afd.png)
 
-#### Give the secuity group a name, that's say, 'demo_IAM_Glue_Role', then click 'Create role' in the bottom of this page.
+#### Give the IAM a name, that's say, 'demo_IAM_Glue_Role', then click 'Create role' in the bottom of this page.
 
 ![image](https://user-images.githubusercontent.com/7371969/226457386-6812f310-9ae1-4e26-b2bf-70580fa8ea29.png)
 
@@ -134,15 +134,28 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226459639-07b9e269-3a1b-4694-935e-5ad4bbf04d20.png)
 
-#### 3.3 Download the p3project.sql, open this sql file and run the script by each statement to create the database, schema and tables.
+#### 3.3 Download the [p3project.sql](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/514816e9ff03646a4688816628a48da2936e0136/p3project.sql), open this sql file and run the script by each statement to create the database, schema and tables.
 
 ![image](https://user-images.githubusercontent.com/7371969/226460252-98be25dd-381b-442e-9c38-02d881872ad2.png)
 
 #### Now, you have all tables on MySQL RDS database.
 
+## Step 4: Set up data conncetion in AWS Glue:
+### 4.1 Search 'glue' in search bar and then click 'AWS Glue'. 
 
+![image](https://user-images.githubusercontent.com/7371969/226461155-3ceb0859-13eb-4b75-9423-029a95481246.png)
 
+### 4.2 Click 'Data connections' in left pannel, scroll down the web page, and click 'Create connection'.
 
+![image](https://user-images.githubusercontent.com/7371969/226461324-a6d978ac-a269-4715-bc3b-36c4af9e5d48.png)
 
+![image](https://user-images.githubusercontent.com/7371969/226461594-a8933605-7529-4b27-ad57-02d3b9b90d1e.png)
 
+### Give the connection a name, that's say, 'mysql_connection'; choose 'Amazon RDS' and then 'MySQL'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226461844-9342f538-bb29-41d7-9e64-ad8a5bfc753b.png)
+
+### Select your 'instance name', in my case, it's 'database-1', then give a Database name, that's say, 'p3project'; Put your master password as 1.6 mentioned here and click 'Create connection'. 
+
+![image](https://user-images.githubusercontent.com/7371969/226462687-e559efff-91d2-4d14-9c74-2c36928784e0.png)
 
