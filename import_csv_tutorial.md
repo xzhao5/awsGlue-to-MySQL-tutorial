@@ -33,7 +33,7 @@
 ![image](https://user-images.githubusercontent.com/7371969/226696983-4525d724-eb16-435b-9519-c7ea85b29c47.png)
 
 ## Step 2: Insert large .csv file by importing via MySQL:
-#### 2.1 Open the table: for example, I suppose to import products table. 
+#### 2.1 Open the table: for example, I suppose to import 'products' table. 
 #### 2.11 Right click the table on your left pannel and then click 'Select Rows -Limit 1000'.
 
 ![image](https://user-images.githubusercontent.com/7371969/226698759-d45fefbf-c4b6-403c-935a-ecebadcd298f.png)
@@ -42,6 +42,25 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226699029-154692e4-f6da-43e3-b9bc-f503b24e80a8.png)
 
-#### 2.13 
+#### 2.13 Select 'products.csv' and click 'Next'.
 
 ![image](https://user-images.githubusercontent.com/7371969/226699495-5ab0921b-8ef7-4eab-800b-421059d46a9a.png)
+
+#### 2.14 Select 'Using existing table:' with the matching table, then click 'Next'.
+
+![image](https://user-images.githubusercontent.com/7371969/226703081-d508dc28-fa94-4b56-9ee8-dfc80cc19420.png)
+
+#### 2.15 Check if all columns are correct, then click 'Next'.  
+
+![image](https://user-images.githubusercontent.com/7371969/226703522-f5c2ab37-b226-479d-8a48-2300c7d18d3a.png)
+
+#### 2.16 Click 'Next'.  
+
+![image](https://user-images.githubusercontent.com/7371969/226703831-a20657fb-4593-48e9-8bcf-a59e707d8c98.png)
+
+#### 2.17 Wait for a few mins to import .csv file into the table. 
+
+![image](https://user-images.githubusercontent.com/7371969/226704106-74e018c4-7cc5-4e76-ae5e-af9ba0eb258e.png)
+
+
+
