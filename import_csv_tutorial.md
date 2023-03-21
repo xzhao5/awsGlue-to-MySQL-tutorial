@@ -33,4 +33,15 @@
 ![image](https://user-images.githubusercontent.com/7371969/226696983-4525d724-eb16-435b-9519-c7ea85b29c47.png)
 
 ## Step 2: Insert large .csv file by importing via MySQL:
+#### 2.1 Open the table: for example, I suppose to import products table. 
+#### 2.11 Right click the table on your left pannel and then click 'Select Rows -Limit 1000'.
 
+![image](https://user-images.githubusercontent.com/7371969/226698759-d45fefbf-c4b6-403c-935a-ecebadcd298f.png)
+
+#### 2.12 Click the icon I highlighted with red color. 
+
+![image](https://user-images.githubusercontent.com/7371969/226699029-154692e4-f6da-43e3-b9bc-f503b24e80a8.png)
+
+#### 2.13 
+
+![image](https://user-images.githubusercontent.com/7371969/226699495-5ab0921b-8ef7-4eab-800b-421059d46a9a.png)
