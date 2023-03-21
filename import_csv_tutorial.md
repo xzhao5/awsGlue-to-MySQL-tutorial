@@ -68,4 +68,40 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226709942-9f9d3c31-20e2-44b8-a0a3-c34e3903744d.png)
 
+## Step 3: Another Method to import .csv file into tables:
+### if you feel the process is too slow and then try this method by using mysql command line.
+#### 3.1 Install mysql on your command line (My example is using ubunto command line in windows system).
+
+#### verify if you has mysql in ubunto command line:
+
+> mysql
+
+#### I do not have mysql client there so I type this command line:
+
+> sudo apt install mysql-client-core-8.0
+
+![image](https://user-images.githubusercontent.com/7371969/226710862-11f3e179-94a8-4f5c-926d-e89503f0087f.png)
+
+#### check the version of mysql client:
+
+> mysql --version
+
+![image](https://user-images.githubusercontent.com/7371969/226711238-cfa6cb22-54b4-4370-8ba0-ac84c5209725.png)
+
+#### 3.1 copy the .csv file from other place into Home directory:
+
+#### My csv file is under the folder: /mnt/c/Users/JR studying PC/Downloads/imba_data. What I do is go into the folder, execute 'cp product.csv ~/' to copy from that location to home directly. (The command means -> cp 'your folder' 'Home Directory')
+
+![image](https://user-images.githubusercontent.com/7371969/226712788-ab2e4a2d-deb4-4b0a-a7a2-82357a6cd8a7.png)
+
+#### 3.2 Go to Home directory, then we now log in MySQL from local computer:
+
+> cd ~/
+
+>  mysql -h your_RDS_endpoints -P 3306 -u admin -p
+
+![image](https://user-images.githubusercontent.com/7371969/226713660-f15911a9-c229-483d-b6c2-ee2e2993d6e8.png)
+
+#### 3.3 
+
 
