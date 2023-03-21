@@ -98,10 +98,42 @@
 
 > cd ~/
 
->  mysql -h your_RDS_endpoints -P 3306 -u admin -p
+##### enter below command to log on:
+
+>  mysql --local-infile=1 -h your_RDS_endpoints -P 3306 -u admin -p
 
 ![image](https://user-images.githubusercontent.com/7371969/226713660-f15911a9-c229-483d-b6c2-ee2e2993d6e8.png)
 
-#### 3.3 
+#### 3.3 Now you have been succesfully log on remote server:
 
+##### check if you select any database:
 
+> select database();
+
+##### select our database:
+
+> use p3project;
+
+##### see all tables:
+
+> show tables;
+
+![image](https://user-images.githubusercontent.com/7371969/226714570-22245932-915c-4552-942b-56cf325e188a.png)
+
+#### 3.3 import .csv file by using inline commands:
+
+##### copy the below command and excute this:
+
+>LOAD DATA LOCAL INFILE '~/products.csv' INTO TABLE Products FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+
+![image](https://user-images.githubusercontent.com/7371969/226721903-35f46d6f-29d2-43e4-bc32-840223b886b6.png)
+
+#### 3.4 Verify if you have successfully inserted into the table:
+
+#### Open MySQL Workbench and exeucte the sql query 'SELECT * FROM p3project.Products;'. Now, you can see all data in your table !!!!
+
+![image](https://user-images.githubusercontent.com/7371969/226722486-ee8a7091-b5ce-483d-8914-fb3897cbb0b3.png)
+
+### You do a great job !!!!
+
+![image](https://user-images.githubusercontent.com/7371969/226722828-dba5cd9f-38cc-48bc-88da-3a1333c1c8e7.png)
