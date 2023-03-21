@@ -43,7 +43,7 @@ CREATE TABLE `Products` (
 # create the 'Departments' table
 CREATE TABLE `Departments` (
   `department_id` int,
-  `department` int,
+  `department` varchar(50),
   PRIMARY KEY (`department_id`)
 );
 
