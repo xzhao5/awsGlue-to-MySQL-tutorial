@@ -62,5 +62,10 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226704106-74e018c4-7cc5-4e76-ae5e-af9ba0eb258e.png)
 
+#### 2.2 Verify if data has been loaded into table:
+
+> SELECT * FROM p3project.Products;
+
+![image](https://user-images.githubusercontent.com/7371969/226709942-9f9d3c31-20e2-44b8-a0a3-c34e3903744d.png)
 
 
