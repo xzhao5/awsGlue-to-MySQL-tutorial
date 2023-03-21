@@ -10,6 +10,8 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226687895-8b3eb417-c14c-4104-a6ab-64a419bc9ba0.png)
 
+#### *Note: Please make sure that you turn on your MySQL RDS database in AWS console. 
 
+#### 1.3 
 
 
