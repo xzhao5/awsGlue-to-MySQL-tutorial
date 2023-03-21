@@ -16,7 +16,21 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/226690133-c058817a-b20a-4c78-9d6d-0795d4d63c12.png)
 
+#### Please make sure you select the database, otherwise you won't run the query !!!
+
 > use p3project;  -- select database
 
 #### *Error: I find I make small mistake on column 'department' in Departments table. Data type should be vachar(50) and I have update the sql file. 
 #### *How to fix: drop the table by 'drop table Departments', then re-execute create table statement for only table 'Departments'.
+
+#### 1.4 Double check if they have been inserted into the table by the below sql queries:
+
+> SELECT * FROM Aisles;
+> Select * from Departments;
+
+#### Now you should get the result as below:
+
+![image](https://user-images.githubusercontent.com/7371969/226696983-4525d724-eb16-435b-9519-c7ea85b29c47.png)
+
+## Step 2: Insert large .csv file by importing via MySQL:
+
