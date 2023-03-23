@@ -4,7 +4,7 @@
 > Are there any steps I can take to enhance my approach? I am currently devising an implementation plan and searching for a technique that can facilitate the automatic import of all CSV files. At present, I am executing the second method, which involves utilizing MySQL CLI.
 
 ## Prerequiest: 
-### 1. Python 3.8.10 (3.9 would be working but not testing on other environment).
+### 1. Python 3.8.10 (3.9 would be working but I did not do test on other version).
 ### 2. mysql-connector-python 8.0.32 - you can install this by:
 > pip install mysql-connector-python
 ### 3. Python package: sys, getopt
@@ -13,7 +13,7 @@
 
 
 
-## Step 1: Download the python code that I wrote, then copy this to Home Directory:  
+## Step 1: Download [main.py](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/c1bbcde2c7b76907fc8c068af05eaaf0529584a6/main.py) that I wrote, then copy this to Home Directory:  
 #### In my example, I use Ubuntu in Windows 10 system. I assume that my python code has been download in the path: 'mnt/c/Users/ggbne/Downloads/'.
 
 ![image](https://user-images.githubusercontent.com/7371969/227112438-fbfa38d0-6969-44c6-983f-a095c48c2d2b.png)
