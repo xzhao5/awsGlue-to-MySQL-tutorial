@@ -58,7 +58,7 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/227116104-c8bb7760-5996-452c-845a-55bc5c19d05d.png)
 
-#### 3.2 Excuecute below CLI commands one by one, replace *python3* with *your python package: python / pip / pip3*, replace *your_username* with *your username (the default is 'admin' if you do not change anything)*, replcae *'your_password'* with *your password (This should be the master password where you create MySQL RDS database)*, replcae *'your_host' with *your RDS database endpoints（for example, xxxx.xxu7oe4cqxxx.xxx.rds.amazonaws.com）*: 
+#### 3.2 Excuecute below CLI commands one by one, replace **python3** with **your python package: python / pip / pip3**, replace **your_username** with **your username (the default is 'admin' if you do not change anything)**, replcae **'your_password'** with **your password (This should be the master password where you create MySQL RDS database)**, replcae **'your_host'** with **your RDS database endpoints（for example, xxxx.xxu7oe4cqxxx.xxx.rds.amazonaws.com）**: 
 
 > python3 main.py -u "your_username" -p "your_password" -t "Products" -f "~/products.csv" -d "Y" -h "your_host" -e "p3project"
 
@@ -71,3 +71,17 @@
 > python3 main.py -u "your_username" -p *"your_password"* -t "Order_product" -f "~/order_products__train.csv" -d "N" -h "your_host" -e "p3project"
 
 > python3 main.py -u "your_username" -p "your_password" -t "Order_product" -f "~/order_products__prior.csv" -d "N" -h "your_host" -e "p3project"
+
+#### for example:
+
+> python3 main.py -u "admin" -p "123456" -t "Order_product" -f "~/order_products__prior.csv" -d "N" -h "xxxx.xxu7oe4cqxxx.xxx.rds.amazonaws.com" -e "p3project"
+
+#### Note: 1. You must turn on your remote AWS RDS database first.
+####       2. Make sure all 6 csv files and main.py in same folder.
+####       3. You must execute python3 commands when main.py in the same folder.
+
+#### if you see the below message, it means you have been successfully insert:
+
+![image](https://user-images.githubusercontent.com/7371969/227118442-47036492-0e07-4f57-b7e3-3881b9b1259e.png)
+
+
