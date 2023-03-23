@@ -38,5 +38,36 @@
 
 > python3 main.py -u username -p password -t table_name -f file_path -d option if trancate table: Y/N -h host -e database_name
 
-#### 3.1 Introduce the syntax I define: 
+#### if you want see the syntax, you can also do this command:
 
+> python3 main.py -o
+
+![image](https://user-images.githubusercontent.com/7371969/227115747-42563823-ca8b-4077-b3ee-46a32404ec31.png)
+
+#### verify if you have python3/python/pip/pip3 install:
+
+> python3 --version
+
+> python --version
+
+> pip --version
+
+> pip3 --version
+
+#### if system returns the version info in CLI, this means you have installed the package:
+
+![image](https://user-images.githubusercontent.com/7371969/227116104-c8bb7760-5996-452c-845a-55bc5c19d05d.png)
+
+#### 3.2 Excuecute below CLI commands one by one, replace *python3* with *your python package: python / pip / pip3*, replace *your_username* with *your username (the default is 'admin' if you do not change anything)*, replcae *'your_password'* with *your password (This should be the master password where you create MySQL RDS database)*, replcae *'your_host' with *your RDS database endpoints（for example, xxxx.xxu7oe4cqxxx.xxx.rds.amazonaws.com）*: 
+
+> python3 main.py -u "your_username" -p "your_password" -t "Products" -f "~/products.csv" -d "Y" -h "your_host" -e "p3project"
+
+> python3 main.py -u "your_username" -p "your_password" -t "Aisles" -f "~/aisles.csv" -d "Y" -h "your_host" -e "p3project"
+
+> python3 main.py -u "your_username" -p "your_password" -t "Orders" -f "~/orders.csv" -d "Y" -h "your_host" -e "p3project"
+
+> python3 main.py -u "your_username" -p "your_password" -t "Departments" -f "~/departments.csv" -d "Y" -h "your_host" -e "p3project"
+
+> python3 main.py -u "your_username" -p *"your_password"* -t "Order_product" -f "~/order_products__train.csv" -d "N" -h "your_host" -e "p3project"
+
+> python3 main.py -u "your_username" -p "your_password" -t "Order_product" -f "~/order_products__prior.csv" -d "N" -h "your_host" -e "p3project"
