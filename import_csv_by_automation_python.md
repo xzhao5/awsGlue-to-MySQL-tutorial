@@ -94,4 +94,8 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/227118442-47036492-0e07-4f57-b7e3-3881b9b1259e.png)
 
+### Now, you know how to do this kind of job in a smart way. Awesome job !!!
+
+![image](https://user-images.githubusercontent.com/7371969/227120959-f50119c8-38b7-417a-8904-41756e039b4b.png)
+
 
