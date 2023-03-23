@@ -9,9 +9,21 @@
 > pip install mysql-connector-python
 ### 3. Python package: sys, getopt
 ### 4. Remote AWS MySQL RDS datatabase has been set up.
-### 5. Ubuntu 20.04.5 LTS Release 20.04 or other compatiable CLI. 
+### 5. For Windows:
+### Ubuntu 20.04.5 LTS Release 20.04 with MySQL client 8.0 installed in CLI:
+> sudo apt install mysql-client-core-8.0
 
-
+### 6. For Mac:
+### Install Homebrew:
+> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+### install mysql-client:
+> brew install mysql-client
+### add the mysql-client binary directory to your PATH:
+> echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.bash_profile
+### reload your bash profile:
+> source ~/.bash_profile
+### verify if you have mysql installed:
+> mysql
 
 ## Step 1: Download [main.py](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/c1bbcde2c7b76907fc8c068af05eaaf0529584a6/main.py) that I wrote, then copy this to Home Directory:  
 #### In my example, I use Ubuntu in Windows 10 system. I assume that my python code has been download in the path: 'mnt/c/Users/ggbne/Downloads/'.
