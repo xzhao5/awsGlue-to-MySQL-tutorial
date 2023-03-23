@@ -3,6 +3,16 @@
 > Scenario: Basaed on last turtorial:[Tutorial: How to import CSV file into MySQL](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/29850ac9cd86ae7feee4362aef67ee36f8958681/import_csv_tutorial.md), There are two methods available for importing large CSV files into MySQL: using the import wizard in MySQL Workbench or MySQL CLI. However, during the process, it has been discovered that importing large CSV files through the MySQL Workbench GUI is very slow. On the other hand, a disadvantage of using MySQL CLI is that it may not be familiar to some team members who are not accustomed to using Linux commands.
 > Are there any steps I can take to enhance my approach? I am currently devising an implementation plan and searching for a technique that can facilitate the automatic import of all CSV files. At present, I am executing the second method, which involves utilizing MySQL CLI.
 
+## Prerequiest: 
+### 1. Python 3.8.10 (3.9 would be working but not testing on other environment).
+### 2. mysql-connector-python 8.0.32 - you can install this by:
+> pip install mysql-connector-python
+### 3. Python package: sys, getopt
+### 4. Remote AWS MySQL RDS datatabase has been set up.
+### 5. Ubuntu 20.04.5 LTS Release 20.04 or other compatiable CLI. 
+
+
+
 ## Step 1: Download the python code that I wrote, then copy this to Home Directory:  
 #### In my example, I use Ubuntu in Windows 10 system. I assume that my python code has been download in the path: 'mnt/c/Users/ggbne/Downloads/'.
 
