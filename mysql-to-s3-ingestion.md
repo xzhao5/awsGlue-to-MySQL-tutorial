@@ -1,6 +1,6 @@
 # Tutorial: How to load data from MySQL RDS to S3 using AWS Database Migration Servers (DMS)
 
-> In this scenario, it is assumed that third-party data is stored in a MySQL relational database. In a previous tutorial, an RDS was successfully created. The current objective is to perform data ingestion from the MySQL RDS database to S3, which involves copying data from tables and inserting them into S3 buckets as .csv files. This solution is intended for training and learning purposes, specifically for our P3 team members to test this function and become familiar with this skill.
+> In this scenario, it is assumed that third-party data is stored in a MySQL relational database. In a previous [tutorial](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/d5fcbd4f132794a6c6a26ac4d9f52364ac4dfb89/tutorial.md), an RDS was successfully created. The current objective is to perform data ingestion from the MySQL RDS database to S3, which involves copying data from tables and inserting them into S3 buckets as .csv files. This solution is intended for training and learning purposes, specifically for our P3 team members to test this function and become familiar with this skill.
 
 ## Prerequisite：
 ### 1. A AWS working account.
@@ -64,7 +64,7 @@
 ![image](https://user-images.githubusercontent.com/7371969/227773492-71785706-2f46-4c0e-8be0-bd8a6a766da1.png)
 
 #### 3.3 Create endpoints for resource - RDS:
-##### 3.31 tick 'Select RDS DB instance' and select MySQL instance you created in previous tutorial, in my case, it's database-1:
+##### 3.31 tick 'Select RDS DB instance' and select MySQL instance you created in previous [tutorial](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/d5fcbd4f132794a6c6a26ac4d9f52364ac4dfb89/tutorial.md), in my case, it's database-1:
 
 ![image](https://user-images.githubusercontent.com/7371969/227773585-e0459f4e-4149-4995-8336-e8447134488a.png)
 
