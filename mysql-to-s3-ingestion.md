@@ -3,9 +3,10 @@
 > In this scenario, it is assumed that third-party data is stored in a MySQL relational database. In a previous tutorial, an RDS was successfully created. The current objective is to perform data ingestion from the MySQL RDS database to S3, which involves copying data from tables and inserting them into S3 buckets as .csv files. This solution is intended for training and learning purposes, specifically for our P3 team members to test this function and become familiar with this skill.
 
 ## Prerequisite：
-### 1. a AWS working account
-### 2. a IAM role which can access s3 and rds.
-### 3. a S3 bucket created for this task
+### 1. A AWS working account.
+### 2. A IAM role which can access s3 and rds.
+### 3. A S3 bucket created for this task.
+### 4. A RDS database with full data.
 
 ## Step 1: Create IAM role: 
 #### 1.1 Go to IAM and click 'Create role':
@@ -82,6 +83,55 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/227774102-339ed687-2eef-45f6-9fde-a1dcbef3d901.png)
 
-##### 3.41 Click 'Create endpoint' -> select 'Target endpoint' -> give endpoint a name, that's say, 's3 target' -> select 'Amazon S3' as Target engine:
+##### 3.42 fill up role ARN - this is role which I created in step 1 and Bucket Name should be the bucket you created in your S3, in my case, my S3 bucket is 'raw-data-mysql-to-s3': 
 
+![image](https://user-images.githubusercontent.com/7371969/227774338-2f9a98aa-2202-42a5-b1cd-36c8f9e12e32.png)
 
+![image](https://user-images.githubusercontent.com/7371969/227774440-1306b5e6-6c63-4dc3-a717-41e275157648.png)
+
+##### 3.43 Expand 'Endpoint settins', click 'add new setting' and enter a new one: AddColumnName:true: 
+
+![image](https://user-images.githubusercontent.com/7371969/227774498-8714ed04-d0a0-4d7d-a878-c4fb286f7d74.png)
+
+##### Note: Why do this step? This is because you would receive the .csv file without column name. 
+
+##### 3.44 Choose VPN as same as DMS, click 'Run test' to test if this is working (if all good, its status would be 'Successfuly'), then click 'Create endpoint': 
+
+![image](https://user-images.githubusercontent.com/7371969/227774659-a1ae3622-3163-4681-8347-f8ed95f4a9a0.png)
+
+## Step 4: Create Database migration task:
+### 4.1 Open the menu of DMS, then click DMS's Name: 
+
+![image](https://user-images.githubusercontent.com/7371969/227774781-5e34b8b8-668b-420e-9251-c84c6c95083f.png)
+
+### 4.2 Click tab 'Migration tasks' and then click 'Create task': 
+
+![image](https://user-images.githubusercontent.com/7371969/227774860-84220631-775e-40be-91a8-670c44fe9730.png)
+
+### 4.3 Give task a name, that's say, 'dms-task-from-mysql-to-s3' -> pick up the replication instance (DMS), source endpoint, target source which we created before:
+
+![image](https://user-images.githubusercontent.com/7371969/227775029-645f282f-ab50-4627-8bbf-3dede64cd6a3.png)
+
+### 4.4 Leave the rest of configration as default but 'migration task startup configuration' change into 'Manually later'.Then, click 'Create task':
+
+![image](https://user-images.githubusercontent.com/7371969/227775134-560add38-7696-4a23-b986-b122c549b877.png)
+
+![image](https://user-images.githubusercontent.com/7371969/227775156-507c3189-6aa9-47d6-a139-b04e12f5d186.png)
+
+## Step 5: Run the migration task.
+### 5.1 Tick the migration task 'dms-task-from-mysql-to-s3' which you created in step 4 -> click 'Actions' -> Click 'Restart/Resume' to start this task:
+
+![image](https://user-images.githubusercontent.com/7371969/227775304-ea10ba96-662b-4428-a573-edcecac35afe.png)
+
+### 5.2 Once the task completed, it shows 'load complete' as below:
+
+![image](https://user-images.githubusercontent.com/7371969/227775399-7a40edff-42ce-4e70-b1af-05d3ba8d4889.png)
+
+## Step 6: Verfiy .csv file:
+### 6.1 Download any csv under S3 bucket you created and this looks good for me:
+
+![image](https://user-images.githubusercontent.com/7371969/227775493-0f0e56fb-263e-4511-9e87-7fa32333cc8e.png)
+
+### Great! You do well, my friends ~!
+
+![image](https://user-images.githubusercontent.com/7371969/227775573-c214b336-6206-4f23-8485-73d81ea46c9c.png)
