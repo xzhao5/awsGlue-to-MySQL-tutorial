@@ -19,6 +19,8 @@ Picture 2 - Column Sarching...
 
 ### 3. One potential solution is file-level partitioning, which involves considering two scenarios when transferring data: 1) transferring a small number of large files, and 2) transferring a large number of small files. Processing large files can be I/O-intensive and strain system resources, while dealing with too many small files can be time-consuming. To address these issues, AWS Lake Formation offers file-level partitioning as a means of optimizing data transfer. (Will be introduced in the future).
 
+### 4. Although I have found AWS Glue to be an efficient way to create data partitions, the cost of doing so is significant. As a result, I am actively seeking alternative solutions that may be more cost-effective in the long term.
+
 ![image](https://user-images.githubusercontent.com/7371969/228171407-caabd2ac-3148-4f70-9bc7-838cd464edc2.png)
 
 ## Testing data partition in column level by using AWS Glue：
