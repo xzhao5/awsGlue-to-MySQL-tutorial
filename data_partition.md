@@ -17,8 +17,7 @@ Picture 2 - Column Sarching...
 
 ![image](https://user-images.githubusercontent.com/7371969/228172722-b5bbc386-940e-4bee-9d37-d9be0ff778b5.png)
 
-
-### 3. Optimal options: the other way is file level partitioning, thinking about two situations when you transfer data, 1. large files but small amout of files and 2. small files but large amount of files. This would cost a lot of I/O operation on processing large files and cause system resource issues, however,if too many small size files but large amount will be time consuming. 
+### 3. One potential solution is file-level partitioning, which involves considering two scenarios when transferring data: 1) transferring a small number of large files, and 2) transferring a large number of small files. Processing large files can be I/O-intensive and strain system resources, while dealing with too many small files can be time-consuming. To address these issues, AWS Lake Formation offers file-level partitioning as a means of optimizing data transfer. (Will be introduced in the future).
 
 ![image](https://user-images.githubusercontent.com/7371969/228171407-caabd2ac-3148-4f70-9bc7-838cd464edc2.png)
 
