@@ -15,9 +15,10 @@ Picture 2 - Column Sarching...
 
 ### 2. In basic terms, horizontal partitioning involves dividing data into separate files based on time intervals, such as year, month, or day. This approach facilitates file management, reduces input/output operations, and segregates data rows into distinct files. As an illustration, we can employ horizontal partitioning to create separate files named collect_year, collect_month, and collect_day for the Department Table. In the following section, I will elaborate on how AWS Glue can be used to implement this method.
 
+![image](https://user-images.githubusercontent.com/7371969/228172722-b5bbc386-940e-4bee-9d37-d9be0ff778b5.png)
 
 
-### 3. Optimal options: the other way is file level partitioning, thinking about two situations when you transfer data, large files but small amout of files and small files but large amount of files. 
+### 3. Optimal options: the other way is file level partitioning, thinking about two situations when you transfer data, 1. large files but small amout of files and 2. small files but large amount of files. This would cost a lot of I/O operation on processing large files and cause system resource issues, however,if too many small size files but large amount will be time consuming. 
 
 ![image](https://user-images.githubusercontent.com/7371969/228171407-caabd2ac-3148-4f70-9bc7-838cd464edc2.png)
 
