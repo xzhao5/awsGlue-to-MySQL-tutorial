@@ -18,7 +18,7 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/229885205-66b44895-0a19-4f6d-b103-bf5371849fe9.png)
 
-#### 4.3 Give this task a name, that's say, 'my-cdc-plus-task' -> 
+#### 4.3 Give this task a name, that's say, 'my-cdc-plus-task'and follow my setup as screenshot shows:
 
 ![image](https://user-images.githubusercontent.com/7371969/229886439-1b13a565-b90f-48be-9e3b-29add3f13b4b.png)
 
@@ -32,9 +32,18 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/229887063-c54fde2d-44a9-4829-a6a7-14018d0e63bc.png)
 
+![image](https://user-images.githubusercontent.com/7371969/229888126-1529868f-0c7b-49d9-808a-aaa624cdb500.png)
+
+## Step 5: Create parameters groups for CDC job:
+#### 5.1 Enter the RDS window in AWS console -> click 'Parameter group'-> click 'Create parameter group':
+
+![image](https://user-images.githubusercontent.com/7371969/229888373-a429cfff-ae49-4082-9b98-ca46d7925337.png)
+
 ![Uploading image.png…]()
 
+#### 5.1 Enter the RDS window in AWS console -> click 'Parameter group'-> click 'Create parameter group':
 
+#### 5.2 Enter the RDS window in AWS console -> click 'Parameter group':
 
 ![image](https://user-images.githubusercontent.com/7371969/229882928-51791a65-52dc-4e6e-90bd-3a151be5e580.png)
 
