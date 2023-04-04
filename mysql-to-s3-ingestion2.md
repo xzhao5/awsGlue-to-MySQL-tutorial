@@ -14,6 +14,25 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/229884754-195c4f89-6f1c-47ee-8b6d-d6d3c4bc2581.png)
 
+#### 4.2 in 'Migration tasks', click 'Create task':
+
+![image](https://user-images.githubusercontent.com/7371969/229885205-66b44895-0a19-4f6d-b103-bf5371849fe9.png)
+
+#### 4.3 Give this task a name, that's say, 'my-cdc-plus-task' -> 
+
+![image](https://user-images.githubusercontent.com/7371969/229886439-1b13a565-b90f-48be-9e3b-29add3f13b4b.png)
+
+![image](https://user-images.githubusercontent.com/7371969/229886622-62effe1f-0428-4127-94d8-59751d23adc9.png)
+
+![image](https://user-images.githubusercontent.com/7371969/229886699-9a793414-67c6-4aeb-bbf6-1785ea62c080.png)
+
+![image](https://user-images.githubusercontent.com/7371969/229886897-40cf6f0b-d510-4352-9f31-d7186ef39385.png)
+
+![image](https://user-images.githubusercontent.com/7371969/229886939-c1702b1d-4053-40ff-b208-555ea25b0158.png)
+
+![image](https://user-images.githubusercontent.com/7371969/229887063-c54fde2d-44a9-4829-a6a7-14018d0e63bc.png)
+
+![Uploading image.png…]()
 
 
 
