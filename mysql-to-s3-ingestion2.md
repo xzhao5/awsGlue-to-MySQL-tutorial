@@ -8,7 +8,7 @@
 ### 3. A S3 bucket created for this task.
 ### 4. A RDS database with full data.
 
-## Please refer last [tutorial](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/361ad204940c12e227b3726854767040a7dfd9b7/mysql-to-s3-ingestion.mdstep) 1 to step 3 as same steps.  
+## Please refer last [tutorial](https://github.com/xzhao5/awsGlue-to-MySQL-tutorial/blob/361ad204940c12e227b3726854767040a7dfd9b7/mysql-to-s3-ingestion.mdstep) Step 1 to step 3 as same steps.  
 ## Step 4: Create a new migration job - Full load and ongoing replicaiton
 #### 4.1 select your replication instance created in last tutorial:
 
