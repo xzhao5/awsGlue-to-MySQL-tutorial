@@ -32,29 +32,64 @@
 
 ![image](https://user-images.githubusercontent.com/7371969/229887063-c54fde2d-44a9-4829-a6a7-14018d0e63bc.png)
 
-![image](https://user-images.githubusercontent.com/7371969/229888126-1529868f-0c7b-49d9-808a-aaa624cdb500.png)
+#### 4.4 The job may be failed but don't worry, this is because our configuration is not finished yet : )
 
 ## Step 5: Create parameters groups for CDC job:
 #### 5.1 Enter the RDS window in AWS console -> click 'Parameter group'-> click 'Create parameter group':
 
+![image](https://user-images.githubusercontent.com/7371969/229888126-1529868f-0c7b-49d9-808a-aaa624cdb500.png)
+
 ![image](https://user-images.githubusercontent.com/7371969/229888373-a429cfff-ae49-4082-9b98-ca46d7925337.png)
 
-![Uploading image.png…]()
+#### 5.2 Fill up parameter and give a name, in my case, it's 'my-default-mysql-8'. 
 
-#### 5.1 Enter the RDS window in AWS console -> click 'Parameter group'-> click 'Create parameter group':
+![image](https://user-images.githubusercontent.com/7371969/229889194-cac7a7ae-be5b-4e95-82af-b9882a0cd1c8.png)
 
-#### 5.2 Enter the RDS window in AWS console -> click 'Parameter group':
+#### 5.3 Edit the parameter Group you just created and change the parameters as below and click 'save changes'.
 
-![image](https://user-images.githubusercontent.com/7371969/229882928-51791a65-52dc-4e6e-90bd-3a151be5e580.png)
+> binlog_format: ROW
+> binlog_checksum:NONE
+> binlog_row_image: FULL
+> log_slave_updates:True (1)
 
-![image](https://user-images.githubusercontent.com/7371969/229884419-f0ef2aef-f097-4b8a-8bb5-fa12cae09f6a.png)
+## Step 6: add this parameters group into your RDS instance: 
+#### 6.1 In left pannel, click 'Databases' -> select your RDS instance:
 
+![image](https://user-images.githubusercontent.com/7371969/229891120-d229795b-b013-4dd8-a070-f5ed67c9d0be.png)
+
+#### 6.2 Click 'Modify' on your right connor: 
+
+![image](https://user-images.githubusercontent.com/7371969/229891665-6fb53a82-59ee-44d6-93e1-1c26501171dc.png)
+
+#### 6.3 keep all default but on this option: you need to select the parameter group you created: 
+
+![image](https://user-images.githubusercontent.com/7371969/229892052-63c69e31-ce0f-4228-99a9-b38de86940f6.png)
+
+![image](https://user-images.githubusercontent.com/7371969/229892250-6466e7b1-0a7a-4b80-aa39-eb74ebdcc935.png)
+
+#### 6.4 You need to reboot the RDS instance to make this effect. 
+
+![image](https://user-images.githubusercontent.com/7371969/229892689-90ad123c-2176-425a-b670-362650d8fc67.png)
+
+## Step 7: Run DMS task again and await for a few mins.
+
+![image](https://user-images.githubusercontent.com/7371969/229892945-2566e099-7725-4af0-8f54-3ccc99ee6fb1.png)
+
+## Step 8: Do some insert on your MySQl database and test if this is working.
+#### Run similar statement as below by using MySQL WorkBench (Note: don't forget to run 'Commit;' to commit data into RDS database)
 
 > INSERT INTO p3project.DepartmentsTest(department_id,department, collect_year,collect_month,collect_day) VALUES (25, 'other5',year(current_timestamp()), month(current_timestamp()),day(current_timestamp()));
 > INSERT INTO p3project.DepartmentsTest(department_id,department, collect_year,collect_month,collect_day) VALUES (24, 'other4',year(current_timestamp()), month(current_timestamp()),day(current_timestamp()));
 > commit;
 
-#### 1.2 select 'AWS service' -> 'DMS' -> Click 'Next':
+## Step 9: Verify this in your DMS menu, mine dectect these inserts successfully. 
 
-GRANT REPLICATION CLIENT ON *.* to admin@'%';
-GRANT REPLICATION SLAVE ON *.* to admin@'%';
+![image](https://user-images.githubusercontent.com/7371969/229882928-51791a65-52dc-4e6e-90bd-3a151be5e580.png)
+
+## Step 10: Verify this in your S3 bucket, mine dectect these inserts columns successfully.
+
+![image](https://user-images.githubusercontent.com/7371969/229884419-f0ef2aef-f097-4b8a-8bb5-fa12cae09f6a.png)
+
+## You do a great job ~ : )
+
+![image](https://user-images.githubusercontent.com/7371969/229894295-9e8ce5d2-acbb-4ff2-a99a-69cafc1d41de.png)
